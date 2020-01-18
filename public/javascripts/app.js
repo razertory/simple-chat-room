@@ -17,14 +17,23 @@ $( document ).ready(function() {
 		connection.send(text);
 	};
 
-	var $messages = $("#messages"), $send = $("#send"), $message = $("#message"); 
+	var $messages = $("#messages"), $send = $("#send"), $message = $("#message");
 	
 	var url = getScriptParamUrl();
 	var connection = new WebSocket(url);
+	var keepAlive = function() {
+        var timeout = 47000;
+        if (connection.readyState == connection.OPEN) {
+            connection.send('');
+        }
+        console.log('heat beating..')
+        setTimeout(keepAlive, timeout);
+    }
 
 	$send.prop("disabled", true);
-		
+
 	connection.onopen = function() {
+        keepAlive()
 		$send.prop("disabled", false);
 		$messages
 				.prepend($("<li class='bg-info' style='font-size: 1.5em'>Connected</li>"));
@@ -43,5 +52,5 @@ $( document ).ready(function() {
 		$messages.append($("<li style='font-size: 1.5em'>" + event.data + "</li>"))
 	}
 
-	console.log( "chat app is running!" );	
+	console.log( "chat app is running!..xxxxxx" );
 });
