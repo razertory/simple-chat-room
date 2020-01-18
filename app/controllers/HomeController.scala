@@ -88,8 +88,15 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents, i
   }
 
   // 存放聊天记录
-  private def persistLog(s: String) = {
+  private def persistLog(s: String): String = {
+    if (s == "") {
+      return "心跳"
+    }
     history += s
+    if (history.size > 40) {
+      logger.warn("清除历史记录")
+      history.remove(0, 20)
+    }
     s
   }
 }
