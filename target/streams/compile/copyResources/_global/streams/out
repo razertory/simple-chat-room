@@ -1,5 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/springchan/scala/play-samples-play-scala-chatroom-example/conf/logback.xml,/Users/springchan/scala/play-samples-play-scala-chatroom-example/target/scala-2.13/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/springchan/scala/play-samples-play-scala-chatroom-example/conf/messages,/Users/springchan/scala/play-samples-play-scala-chatroom-example/target/scala-2.13/classes/messages)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/springchan/scala/play-samples-play-scala-chatroom-example/conf/application.conf,/Users/springchan/scala/play-samples-play-scala-chatroom-example/target/scala-2.13/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/springchan/scala/play-samples-play-scala-chatroom-example/conf/routes,/Users/springchan/scala/play-samples-play-scala-chatroom-example/target/scala-2.13/classes/routes)[0m

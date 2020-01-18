@@ -1,1 +1,0 @@
-["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/springchan/scala/simple-chat-room/build.sbt","634285b038b1a4564fa62eae25c70ecbaf322a1f"],["/Users/springchan/scala/simple-chat-room/project/plugins.sbt","3d293dc1b268eb8199bc46f44f1d96a9295a5c6e"]],"lastModifiedTimes":[]}]

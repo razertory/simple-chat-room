@@ -425,3 +425,16 @@
 {"@timestamp":"2020-01-15T17:23:17.423+08:00","message":"[source] Element: gao"}
 {"@timestamp":"2020-01-15T17:23:23.957+08:00","message":"[source] Element: is stupid"}
 {"@timestamp":"2020-01-15T17:24:51.624+08:00","message":"Stopping server..."}
+{"@timestamp":"2020-01-18T12:58:43.992+08:00","message":"Slf4jLogger started"}
+{"@timestamp":"2020-01-18T12:58:44.262+08:00","message":"Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):\n\n    play.filters.csrf.CSRFFilter\n    play.filters.headers.SecurityHeadersFilter\n    play.filters.hosts.AllowedHostsFilter\n    filters.ContentSecurityPolicyFilter\n"}
+{"@timestamp":"2020-01-18T12:58:44.272+08:00","message":"Application started (Dev) (no global state)"}
+{"@timestamp":"2020-01-18T12:58:44.432+08:00","message":"index: ","host":"localhost:9000","path":"/"}
+{"@timestamp":"2020-01-18T15:15:44.107+08:00","message":"index: ","host":"localhost:9000","path":"/"}
+{"@timestamp":"2020-01-18T15:15:46.090+08:00","message":"[source] Element: ddd"}
+{"@timestamp":"2020-01-18T15:18:59.314+08:00","message":"index: ","host":"localhost:9000","path":"/"}
+{"@timestamp":"2020-01-18T15:19:01.088+08:00","message":"index: ","host":"localhost:9000","path":"/"}
+{"@timestamp":"2020-01-18T15:19:02.933+08:00","message":"[source] Element: d"}
+{"@timestamp":"2020-01-18T15:19:23.262+08:00","message":"index: ","host":"localhost:9000","path":"/"}
+{"@timestamp":"2020-01-18T15:19:25.372+08:00","message":"[source] Element: dsd"}
+{"@timestamp":"2020-01-18T15:19:26.510+08:00","message":"[source] Element: dsd"}
+{"@timestamp":"2020-01-18T15:20:26.173+08:00","message":"Stopping server..."}
