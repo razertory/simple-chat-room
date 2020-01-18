@@ -37,6 +37,15 @@ $( document ).ready(function() {
 		$send.prop("disabled", false);
 		$messages
 				.prepend($("<li class='bg-info' style='font-size: 1.5em'>Connected</li>"));
+        fetch("/chat/history")
+            .then(resp => {return resp.json()})
+            .then(json => {
+                var history = json.history
+                console.log(history)
+                history.forEach(chat => {
+                    $messages.append($("<li style='font-size: 1.5em'>" + chat + "</li>"))
+                })
+            })
 		$send.on('click', send);
 		$message.keypress(function(event) {
 			var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -49,7 +58,7 @@ $( document ).ready(function() {
 		console.log('WebSocket Error ', error);
 	};
 	connection.onmessage = function(event) {
-		$messages.append($("<li style='font-size: 1.5em'>" + event.data + "</li>"))
+        $messages.append($("<li style='font-size: 1.5em'>" + event.data + "</li>"))
 	}
 
 	console.log( "chat app is running!..xxxxxx" );
