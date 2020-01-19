@@ -23,6 +23,8 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents, i
                                webJarsUtil: org.webjars.play.WebJarsUtil)
                                extends BaseController with RequestMarkerContext {
 
+  private val maxHistorySize = 1000
+
   private type WSMessage = String
 
   private val history = new ListBuffer[String]
@@ -82,7 +84,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents, i
   def chatHistory() = Action {
     implicit request: RequestHeader =>
       val json: JsValue = Json.obj(
-        "history" -> history.takeRight(20).toList
+        "history" -> history.takeRight(600).toList
       )
       Ok(json)
   }
@@ -93,7 +95,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents, i
       return "心跳"
     }
     history += s
-    if (history.size > 40) {
+    if (history.size > maxHistorySize) {
       logger.warn("清除历史记录")
       history.remove(0, 20)
     }

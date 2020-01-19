@@ -8,6 +8,21 @@ html, body {
     margin: 0 auto -60px;
 }
 
-.footer {
-    height: 60px;
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.message-container {
+    flex: 1;
+    overflow: scroll;
+}
+
+.footers {
+    padding: 10px 0;
+}
+
+.list-unstyled {
+    overflow: scroll;
 }

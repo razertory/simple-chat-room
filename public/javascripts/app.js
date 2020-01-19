@@ -41,11 +41,12 @@ $( document ).ready(function() {
             .then(resp => {return resp.json()})
             .then(json => {
                 var history = json.history
-                console.log(history)
                 history.forEach(chat => {
                     $messages.append($("<li style='font-size: 1.5em'>" + chat + "</li>"))
                 })
+                $('.message-container')[0].scrollTop = $('.list-unstyled').height() * 100
             })
+
 		$send.on('click', send);
 		$message.keypress(function(event) {
 			var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -59,7 +60,8 @@ $( document ).ready(function() {
 	};
 	connection.onmessage = function(event) {
         $messages.append($("<li style='font-size: 1.5em'>" + event.data + "</li>"))
+        $('.message-container')[0].scrollTop = $('.list-unstyled').height() * 100
 	}
 
-	console.log( "chat app is running!..xxxxxx" );
+	console.log( "chat app is running!..." );
 });
